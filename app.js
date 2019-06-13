@@ -21,11 +21,16 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
-app.get('/admin/user', (req, res) => {
-    res.render('user');
+app.get('/admin/user/adduser', (req, res) => {
+    res.render('adduser');
+})
+app.get('/admin/user/deleteuser', (req, res) => {
+    res.render('deleteuser');
 })
 
-
+app.get('/admin/user/edituser', (req, res) => {
+    res.render('edituser');
+})
 app.use('/admin/categories', require('./routes/admin/category.route'));
 app.use('/admin/user', require('./routes/admin/users.route'));
 
