@@ -1,0 +1,12 @@
+
+  <form class="deleteuserform" method="POST" onsubmit="return sendData()">
+  <input type="text" placeholder="idUser" />
+  <button type="submit" onclick="sendData()">Delete</button>
+  <script>
+  var function sendData() {
+    var form = document.querySelector('form');
+    var data = new FormData(form);
+    var req = new XMLHttpRequest();
+    req.send(data);
+  }
+  </script>
