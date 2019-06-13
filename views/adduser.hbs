@@ -1,0 +1,22 @@
+<form class="adduserform" method="POST" onsubmit="return sendData()">
+  <input type="text" placeholder="idUser" />
+  <input type="text" name="HoTen" placeholder="HoTen" />
+  <input type="text" name="Username" placeholder="Username" />
+  <input type="password" name="Password" placeholder="Password" />
+  <input type="text" name="DiaChi" placeholder="DiaChi" />
+  <input type="text" name="Dienthoai " placeholder="Dienthoai" />
+  <input type="text" name="Email" placeholder="Email" />
+  <input type="date" name="NgayDangKy" placeholder="NgayDangKy" />
+  <input type="date" name="NgaySinh" placeholder="NgaySinh" />
+  <input type="text" name="GioiTinh" placeholder="GioiTinh" />
+  <input type="text" name="VipPresent" placeholder="VipPresent" />
+  <button type="submit" onclick="sendData()">Add</button> 
+</form>
+<script>
+  var function sendData() {
+    var form = document.querySelector('form');
+    var data = new FormData(form);
+    var req = new XMLHttpRequest();
+    req.send(data);
+  }
+  </script>
