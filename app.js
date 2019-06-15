@@ -21,15 +21,21 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
-app.get('/admin/user/adduser', (req, res) => {
+app.get('/admin/adduser', (req, res) => {
     res.render('adduser');
 })
-app.get('/admin/user/deleteuser', (req, res) => {
+app.get('/admin/deleteuser', (req, res) => {
     res.render('deleteuser');
 })
 
-app.get('/admin/user/edituser', (req, res) => {
+app.get('/admin/edituser', (req, res) => {
     res.render('edituser');
+})
+app.get('/admin/updateadmin', (req, res) => {
+    res.render('updateadmin');
+})
+app.get('/admin', (req, res) => {
+    res.render('adminmanage');
 })
 app.use('/admin/categories', require('./routes/admin/category.route'));
 app.use('/admin/user', require('./routes/admin/users.route'));

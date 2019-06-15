@@ -51,6 +51,29 @@ router.post('/edituser', (req, res) => {
     userModel.editUser(user);
     res.render('edituser');
 })
-   
+router.post('/updateadmin', (req, res) => {
+    
+
+    var user = {
+        idUser: req.body.idUser,
+        HoTen: req.body.HoTen,
+        Username: req.body.Username,
+        Password: req.body.Password,
+        DiaChi: req.body.DiaChi,
+        Dienthoai: req.body.Dienthoai,
+        Email: req.body.Email,
+        NgayDangKy: req.body.NgayDangKy,
+    
+        NgaySinh: req.body.NgaySinh,
+        GioiTinh: req.body.GioiTinh,
+        VipPresent: req.body.VipPresent,
+    };
+    userModel.updateadmin(user);
+    res.render('updateadmin');
+})
+router.get('', (req, res) => {
+    
+    res.render('adminmanage');
+})   
 
 module.exports = router;
