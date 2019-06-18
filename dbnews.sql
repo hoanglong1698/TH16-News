@@ -45,7 +45,6 @@ CREATE TABLE `comment` (
 CREATE TABLE `loaitin` (
   `idLT` int(11) NOT NULL,
   `Ten` varchar(100) NOT NULL DEFAULT '',
-  `Ten_KhongDau` varchar(255) NOT NULL,
   `ThuTu` tinyint(11) NOT NULL DEFAULT '0',
   `AnHien` tinyint(1) NOT NULL DEFAULT '1',
   `idTL` int(11) NOT NULL DEFAULT '1'
@@ -177,7 +176,7 @@ ALTER TABLE `loaitin`
 -- AUTO_INCREMENT cho bảng `theloai`
 --
 ALTER TABLE `theloai`
-  MODIFY `idTL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idTL` int(11) NOT NULL AUTO_INCusersusersREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `tin`
@@ -192,6 +191,27 @@ ALTER TABLE `users`
   MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
+CREATE TABLE `tags` (
+  `idTag` int(11) NOT NULL auto_increment,
+  primary key(idTag),
+  `TenTag` varchar(255) NOT NULL DEFAULT '',
+  `NgayTao` varchar(255) NOT NULL DEFAULT '19-06-2019'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `tags` (`TenTag`, `NgayTao`) VALUES
+('Donald Trump', '16-06-2019'),
+('iPhoneX', '16-06-2019'),
+('Truong Giang', '16-06-2019'),
+('Tu Nhien', '17-06-2019'),
+('Apple', '18-06-2019'),
+('Song', '19-06-2019'),
+('BlackPink', '19-06-2019');
+
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`idTag`)
+
+DROP TABLE tags
+DELETE FROM tags where idTag=9
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
