@@ -52,4 +52,13 @@ router.post('/edit', (req, res) => {
   res.redirect('/admin/tag');
 })
 
+router.post('/delete', (req, res) => {
+  var tag = {
+      idTag: req.body.idTag,
+      TagName: req.body.TagName,
+  };
+  tagModel.delete(tag);
+  res.redirect('/admin/tag');
+})
+
 module.exports = router;
