@@ -40,7 +40,6 @@ app.get('/admin', (req, res) => {
     res.render('adminmanage');
 })
 
-app.use('/', require('./routes/Home.route'));
 app.use(require('./middlewares/locals.mdw'));
 app.use('/admin/categories', require('./routes/admin/category.route'));
 app.use('/admin/user', require('./routes/admin/users.route'));
