@@ -21,7 +21,7 @@ module.exports = {
   },
 
   delete: (tag) => {
-    var sql = `DELETE from tags WHERE idTag = '${tag.idTag}'`;
+    var sql = `DELETE from tags WHERE idTag = '${tag.idTag}'`
     return db.load(sql);
   },
 };
