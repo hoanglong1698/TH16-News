@@ -40,10 +40,12 @@ app.get('/admin', (req, res) => {
     res.render('adminmanage');
 })
 
-//app.use(require('./middlewares/locals.mdw'));
+app.use('/', require('./routes/Home.route'));
+app.use(require('./middlewares/locals.mdw'));
 app.use('/admin/categories', require('./routes/admin/category.route'));
 app.use('/admin/user', require('./routes/admin/users.route'));
 app.use('/admin/tag', require('./routes/admin/tag.route'));
+app.use('/categories', require('./routes/Article.route'));
 
 app.listen(3000, () => {
     console.log('Web Server is running at http://localhost:3000');
