@@ -39,6 +39,8 @@ app.get('/admin/updateadmin', (req, res) => {
 app.get('/admin', (req, res) => {
     res.render('adminmanage');
 })
+
+app.use(require('./middlewares/locals.mdw'));
 app.use('/admin/categories', require('./routes/admin/category.route'));
 app.use('/admin/user', require('./routes/admin/users.route'));
 app.use('/admin/tag', require('./routes/admin/tag.route'));
