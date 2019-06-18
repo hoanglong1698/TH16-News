@@ -5,6 +5,10 @@ module.exports = {
     return db.load('select * from loaitin');
   },
 
+  single: id => {
+    return db.load(`select * from loaitin where idLT = '${id}'`)
+  },
+
   loadactive: () => {
     return db.load(`select * from theloai where AnHien = ${1}`);
   },
@@ -20,12 +24,12 @@ module.exports = {
   },
 
   edit: (category) => {
-    var sql = `UPDATE loaitin SET Ten = '${category.TagName}',  WHERE idTag = '${tag.idTag}'`
+    var sql = `UPDATE loaitin SET Ten = '${category.CategoryName}', BienTapVien = '${category.EditorName}'  WHERE idLT = '${category.idLT}'`
     return db.load(sql);
   },
 
-  delete: (tag) => {
-    var sql = `DELETE from tags WHERE idTag = '${tag.idTag}'`
+  delete: (category) => {
+    var sql = `DELETE from loaitin WHERE idLT = '${category.idLT}'`
     return db.load(sql);
   },
 };

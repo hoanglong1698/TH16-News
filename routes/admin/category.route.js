@@ -40,11 +40,11 @@ router.post('/add', (req, res) => {
 
 router.get('/edit/:id', (req, res) => {
   var id = req.params.id;
-  tagModel.single(id)
+  categoryModel.single(id)
   .then(rows => {
     if (rows.length > 0) {
-      res.render('admin/vwTags/edit', {
-        tag_edit: rows[0],
+      res.render('admin/vwCategories/edit', {
+        category_edit: rows[0],
       });
     }
   }).catch(err =>{
@@ -54,21 +54,23 @@ router.get('/edit/:id', (req, res) => {
 })
 
 router.post('/edit', (req, res) => {
-  var tag = {
-      idTag: req.body.idTag,
-      TagName: req.body.TagName,
+  var category = {
+      idLT: req.body.idCategory,
+      CategoryName: req.body.CategoryName,
+      EditorName: req.body.EditorName
   };
-  tagModel.edit(tag);
-  res.redirect('/admin/tag');
+  categoryModel.edit(category);
+  res.redirect('/admin/categories');
 })
 
 router.post('/delete', (req, res) => {
-  var tag = {
-      idTag: req.body.idTag,
-      TagName: req.body.TagName,
-  };
-  tagModel.delete(tag);
-  res.redirect('/admin/tag');
+  var category = {
+    idLT: req.body.idCategory,
+    CategoryName: req.body.CategoryName,
+    EditorName: req.body.EditorName
+};
+categoryModel.delete(category);
+  res.redirect('/admin/categories');
 })
 
 module.exports = router;

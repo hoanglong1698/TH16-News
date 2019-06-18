@@ -40,13 +40,13 @@
                     <td>{{Ten}}</td>
                     <td>
                       <img alt="image" src="../img/avatar/avatar-5.png" class="rounded-circle" width="35"
-                        data-toggle="tooltip" title="Hoàng Long">
+                        data-toggle="tooltip" title="{{BienTapVien}}">
                       {{BienTapVien}}
                     </td>
                     <td>{{NgayTao}}</td>
                     <td>
-                      <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Chỉnh sửa"><i
-                          class="fas fa-pencil-alt"></i></a>
+                      <a class="btn btn-primary btn-action mr-1" href="/admin/categories/edit/{{idLT}}" role="button" data-toggle="tooltip"
+                      title="Chỉnh sửa"><i class="fas fa-pencil-alt"></i></a>
                     </td>
                   </tr>
                   {{/each}}

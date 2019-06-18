@@ -1,0 +1,73 @@
+<div class="main-content">
+    <section class="section">
+        <div class="section-header">
+            <h1>Chuyên mục</h1>
+        </div>
+
+        <div class="section-body">
+            <h2 class="section-title">Chuyên mục</h2>
+            <p class="section-lead">Quản lý chuyên mục.</p>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Sửa chuyên mục</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" action="/admin/categories/edit">
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-2">Mã chuyên mục</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input readonly name="idCategory" value="{{this.category_edit.idLT}}" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-2">Tên chuyên
+                                        mục</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input name="CategoryName" type="text" value="{{this.category_edit.Ten}}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-2">Biên tập
+                                        viên</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <select class="form-control" name="EditorName" data-height="100%">
+                                            <option>Hoàng Long</option>
+                                            <option>Phi Linh</option>
+                                            <option>Kông Kiệt</option>
+                                            <option>Khánh Linh</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-2">Chuyên mục cấp
+                                        1</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <select class="form-control" data-height="100%">
+                                            <option>Thể thao</option>
+                                            <option>Giải trí</option>
+                                            <option>Kinh doanh</option>
+                                            <option>Sức khỏe</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-2"></label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <a href="/admin/categories" class="btn btn-primary">Trở về</a>
+                                        <button type="submit" class="btn btn-success">Lưu thông tin</button>
+                                         <button type="submit" formaction="/admin/categories/delete" class="btn btn-danger float-right">Xóa</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
