@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Dashboard &mdash; TH16-News</title>
 
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 
 
@@ -20,217 +17,172 @@
 </head>
 
 <body>
-  <div class="row">
     <div class="main-wrapper">
-      <div class="col-md-3 col-sm-3 col-lg-3">
-        <div class="main-sidebar">
-          <aside id="sidebar-wrapper">
-            <div class="sidebar-brand">
-              <a href="index.html">TH16-News</a>
+        <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+          <div class="search-element">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+            <div class="search-backdrop"></div>
+            <div class="search-result">
+              <div class="search-header">
+                Lịch sử
+              </div>
+              <div class="search-item">
+                <a href="#">Windows 10</a>
+                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+              </div>
+              <div class="search-item">
+                <a href="#">Donald Trump</a>
+                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+              </div>
+              <div class="search-header">
+                Phóng viên
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <img class="mr-3 rounded" width="30" src="../img/products/product-3-50.png" alt="product">
+                  iPhone 6
+                </a>
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <img class="mr-3 rounded" width="30" src="../img/products/product-2-50.png" alt="product">
+                  Rocket
+                </a>
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <img class="mr-3 rounded" width="30" src="/img/products/product-1-50.png" alt="product">
+                  Headphone Blitz
+                </a>
+              </div>
             </div>
-            <div class="sidebar-brand sidebar-brand-sm">
-              <a href="index.html">TH16</a>
-            </div>
-            <ul class="sidebar-menu">
-              <li class="menu-header">Dashboard</li>
-              <li class="active"><a class="nav-link" href="index.html"><i class="fas fa-fire"></i>
-                  <span>Dashboard</span></a></li>
-
-              <li class="menu-header">BÀI VIẾT</li>
-              <li><a class="nav-link" href="post-create.html"><i class="far fa-edit"></i> <span>Tạo bài viết</span></a>
-              </li>
-              <li><a class="nav-link" href="posts-manage.html"><i class="fas fa-tasks"></i> <span>Quản lý bài
-                    viết</span></a></li>
-              <li><a class="nav-link" href="posts-approve.html"><i class="far fa-check-square"></i> <span>Duyệt bài
-                    viết</span></a></li>
-
-              <li class="menu-header">THỂ LOẠI</li>
-              <li><a class="nav-link" href="category-manage.html"><i class="far fa-folder-open"></i> <span>Quản lý
-                    chuyên
-                    mục</span></a></li>
-              <li><a class="nav-link" href="tag-manage.html"><i class="fas fa-tags"></i> <span>Quản lý tag</span></a>
-              </li>
-
-              <li class="menu-header">NGƯỜI DÙNG</li>
-              <li><a class="nav-link" href="user-manage.html"><i class="fas fa-user-friends"></i> <span>Độc
-                    giả</span></a>
-              </li>
-              <li><a class="nav-link" href="writer-manage.html"><i class="fas fa-user-edit"></i> <span>Phóng
-                    viên</span></a>
-              </li>
-              <li><a class="nav-link" href="editor-manage.html"><i class="fas fa-user-check"></i> <span>Biên tập
-                    viên</span></a></li>
-              <li><a class="nav-link" href="admin"><i class="fas fa-user-tie"></i> <span>Admin</span></a>
-              </li>
-            </ul>
-
-          </aside>
-        </div>
-      </div>
-
-        <div class="row">
-          <div class="navbar-bg"></div>
-          <nav class="navbar navbar-expand-lg main-navbar">
-            <form class="form-inline mr-auto">
-              <ul class="navbar-nav mr-3">
-                <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-                <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
-                      class="fas fa-search"></i></a>
-                </li>
-              </ul>
-              <div class="search-element">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
-                <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                <div class="search-backdrop"></div>
-                <div class="search-result">
-                  <div class="search-header">
-                    Lịch sử
-                  </div>
-                  <div class="search-item">
-                    <a href="#">Windows 10</a>
-                    <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-                  </div>
-                  <div class="search-item">
-                    <a href="#">Donald Trump</a>
-                    <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-                  </div>
-                  <div class="search-header">
-                    Phóng viên
-                  </div>
-                  <div class="search-item">
-                    <a href="#">
-                      <img class="mr-3 rounded" width="30" src="../img/products/product-3-50.png" alt="product">
-                      iPhone 6
-                    </a>
-                  </div>
-                  <div class="search-item">
-                    <a href="#">
-                      <img class="mr-3 rounded" width="30" src="../img/products/product-2-50.png" alt="product">
-                      Rocket
-                    </a>
-                  </div>
-                  <div class="search-item">
-                    <a href="#">
-                      <img class="mr-3 rounded" width="30" src="/img/products/product-1-50.png" alt="product">
-                      Headphone Blitz
-                    </a>
-                  </div>
+          </div>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Tin nhắn
+                <div class="float-right">
+                  <a href="#">Đánh dấu tất cả là đã đọc</a>
                 </div>
               </div>
-            </form>
-            <ul class="navbar-nav navbar-right">
-              <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                  class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-                <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                  <div class="dropdown-header">Tin nhắn
-                    <div class="float-right">
-                      <a href="#">Đánh dấu tất cả là đã đọc</a>
-                    </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="/img/avatar/avatar-1.png" class="rounded-circle">
+                    <div class="is-online"></div>
                   </div>
-                  <div class="dropdown-list-content dropdown-list-message">
-                    <a href="#" class="dropdown-item dropdown-item-unread">
-                      <div class="dropdown-item-avatar">
-                        <img alt="image" src="/img/avatar/avatar-1.png" class="rounded-circle">
-                        <div class="is-online"></div>
-                      </div>
-                      <div class="dropdown-item-desc">
-                        <b>Kiệt</b>
-                        <p>Xin chào</p>
-                        <div class="time">10 giờ trước</div>
-                      </div>
-                    </a>
-                    <a href="#" class="dropdown-item dropdown-item-unread">
-                      <div class="dropdown-item-avatar">
-                        <img alt="image" src="/img/avatar/avatar-2.png" class="rounded-circle">
-                      </div>
-                      <div class="dropdown-item-desc">
-                        <b>Hùng</b>
-                        <p>Tôi chưa viết bài về Windows 10</p>
-                        <div class="time">12 giờ trước</div>
-                      </div>
-                    </a>
+                  <div class="dropdown-item-desc">
+                    <b>Kiệt</b>
+                    <p>Xin chào</p>
+                    <div class="time">10 giờ trước</div>
                   </div>
-                  <div class="dropdown-footer text-center">
-                    <a href="#">Xem tất cả <i class="fas fa-chevron-right"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                  class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
-                <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                  <div class="dropdown-header">Thông báo
-                    <div class="float-right">
-                      <a href="#">Đánh dấu tất cả là đã đọc</a>
-                    </div>
-                  </div>
-                  <div class="dropdown-list-content dropdown-list-icons">
-                    <a href="#" class="dropdown-item dropdown-item-unread">
-                      <div class="dropdown-item-icon bg-primary text-white">
-                        <i class="fas fa-bell"></i>
-                      </div>
-                      <div class="dropdown-item-desc">
-                        Có 3 bài đăng đang chờ duyệt!
-                        <div class="time text-primary">2 Min Ago</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="dropdown-footer text-center">
-                    <a href="#">Xem tất cả<i class="fas fa-chevron-right"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li class="dropdown"><a href="#" data-toggle="dropdown"
-                  class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                  <img alt="image" src="/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-                  <div class="d-sm-none d-lg-inline-block">Hi, Hoàng Long</div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <div class="dropdown-title">Đăng nhập 5 phút trước</div>
-                  <a href="profile.html" class="dropdown-item has-icon">
-                    <i class="far fa-user"></i> Thông tin
-                  </a>
-                  <a href="features-activities.html" class="dropdown-item has-icon">
-                    <i class="fas fa-bolt"></i> Hoạt động
-                  </a>
-                  <a href="features-settings.html" class="dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Cài đặt
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a href="#" class="dropdown-item has-icon text-danger">
-                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
-                  </a>
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="/img/avatar/avatar-2.png" class="rounded-circle">
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Hùng</b>
+                    <p>Tôi chưa viết bài về Windows 10</p>
+                    <div class="time">12 giờ trước</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Xem tất cả <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Thông báo
+                <div class="float-right">
+                  <a href="#">Đánh dấu tất cả là đã đọc</a>
                 </div>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-
-
-
-
-
-        <div class="row">
-          <div class="col-md-12">
-            {{{body}}}
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-primary text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Có 3 bài đăng đang chờ duyệt!
+                    <div class="time text-primary">2 Min Ago</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Xem tất cả<i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Hoàng Long</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Đăng nhập 5 phút trước</div>
+              <a href="profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Thông tin
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Hoạt động
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Cài đặt
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Đăng xuất
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">TH16-News</a>
           </div>
-        </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">TH16</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Dashboard</li>
+            <li class="active"><a class="nav-link" href="index.html"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
+
+            <li class="menu-header">BÀI VIẾT</li>
+            <li><a class="nav-link" href="post-create.html"><i class="far fa-edit"></i> <span>Tạo bài viết</span></a></li>
+            <li><a class="nav-link" href="posts-manage.html"><i class="fas fa-tasks"></i> <span>Quản lý bài viết</span></a></li>
+            <li><a class="nav-link" href="posts-approve.html"><i class="far fa-check-square"></i> <span>Duyệt bài viết</span></a></li>
+
+            <li class="menu-header">THỂ LOẠI</li>
+            <li><a class="nav-link" href="/admin/categories"><i class="far fa-folder-open"></i> <span>Quản lý chuyên mục</span></a></li>
+            <li><a class="nav-link" href="/admin/tag"><i class="fas fa-tags"></i> <span>Quản lý tag</span></a></li>
+
+            <li class="menu-header">NGƯỜI DÙNG</li>
+            <li><a class="nav-link" href="user-manage.html"><i class="fas fa-user-friends"></i> <span>Độc giả</span></a></li>
+            <li><a class="nav-link" href="writer-manage.html"><i class="fas fa-user-edit"></i> <span>Phóng viên</span></a></li>
+            <li><a class="nav-link" href="editor-manage.html"><i class="fas fa-user-check"></i> <span>Biên tập viên</span></a></li>
+            <li><a class="nav-link" href="admin-manage.html"><i class="fas fa-user-tie"></i> <span>Admin</span></a></li>
+          </ul>
+
+        </aside>
+      </div>
+      
+      {{{body}}}
     </div>
-  </div>
-
-
-
-
-
   <!-- General JS Scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="/js/stisla.js"></script>
@@ -250,5 +202,4 @@
   <!-- Page Specific JS File -->
   <script src="/js/page/index-0.js"></script>
 </body>
-
 </html>
