@@ -74,6 +74,29 @@ INSERT INTO `editors` (`HoTen`, `Username`, `Password`, `DiaChi`, `DienThoai`, `
 ('Phi Linh', 'username','password','diachi','dienthoai','email','Nữ','Hoạt động'),
 ('Bảo Lộc', 'username','password','diachi','dienthoai','email','Nam','Hoạt động');
 
+REATE TABLE `writers` (
+  `idWriter` int(11) NOT NULL auto_increment,
+  `HoTen` varchar(100) NOT NULL DEFAULT '',
+  `Username` varchar(50) NOT NULL DEFAULT '',
+  `Password` varchar(50) NOT NULL,
+  `DiaChi` varchar(255) DEFAULT NULL,
+  `DienThoai` varchar(255) DEFAULT NULL,
+  `Email` varchar(255) NOT NULL DEFAULT '',
+  `NgaySinh` date DEFAULT '2000-10-10',
+  `GioiTinh` varchar(3) DEFAULT NULL,
+  `TrangThai` varchar(20) default 'Hoạt động',
+  PRIMARY KEY (`idEditor`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `editors` (`HoTen`, `Username`, `Password`, `DiaChi`, `DienThoai`, `Email`, `GioiTinh`, `TrangThai`) values
+('Hoàng Long', 'username','password','diachi','dienthoai','email','Nam','Hoạt động'),
+('Kông Kiệt', 'username','password','diachi','dienthoai','email','Nam','Hoạt động'),
+('Khánh Linh', 'username','password','diachi','dienthoai','email','Nữ','Hoạt động'),
+('Kiều My', 'username','password','diachi','dienthoai','email','Nữ','Hoạt động'),
+('Phi Linh', 'username','password','diachi','dienthoai','email','Nữ','Hoạt động'),
+('Bảo Lộc', 'username','password','diachi','dienthoai','email','Nam','Hoạt động');
+
+
 CREATE TABLE IF NOT EXISTS `tin` (
   `idTin` int(11) NOT NULL AUTO_INCREMENT,
   `TieuDe` varchar(255) NOT NULL DEFAULT '',
