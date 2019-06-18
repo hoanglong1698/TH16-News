@@ -18,10 +18,6 @@ app.engine('hbs', exphbs({
     defaultLayout: 'main.hbs'
   }));
   app.set('view engine', 'hbs');
-  
-app.get('/', (req, res) => {
-    res.render('home');
-})
 
 app.get('/admin/adduser', (req, res) => {
     res.render('adduser');
@@ -38,6 +34,10 @@ app.get('/admin/updateadmin', (req, res) => {
 })
 app.get('/admin', (req, res) => {
     res.render('adminmanage');
+})
+
+app.get('/', (req, res) => {
+    res.render('admin/vwDashboard/index');
 })
 
 app.use('/admin/categories', require('./routes/admin/category.route'));
