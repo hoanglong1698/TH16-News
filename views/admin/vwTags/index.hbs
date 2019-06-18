@@ -1,0 +1,87 @@
+<div class="main-content">
+  <section class="section">
+    <div class="section-header">
+      <h1>Tags</h1>
+    </div>
+
+    <div class="section-body">
+      <h2 class="section-title">Tags</h2>
+      <p class="section-lead">Quản lý tags.</p>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h4>Danh sách</h4>
+              <div class="card-header-form">
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm">
+                    <div class="input-group-btn">
+                      <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tr>
+                    <th>#</th>
+                    <th>Tên tags</th>
+                    <th>Ngày tạo</th>
+                    <th>Hành động</th>
+                  </tr>
+                  {{#each this.tags}}
+                  <tr>
+                    <td>{{idTag}}</td>
+                    <td>{{TenTag}}</td>
+                    <td>{{NgayTao}}</td>
+                    <td>
+                      <a class="btn btn-primary btn-action mr-1" href="/admin/tag/edit/{{idTag}}" role="button" data-toggle="tooltip"
+                        title="Chỉnh sửa"><i class="fas fa-pencil-alt"></i></a>
+                      <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Xóa"
+                        data-confirm="Xác nhận?|Bạn chắc chắn muốn xóa tag này?"
+                        data-confirm-yes="href('/admin/tag')"><i class="fas fa-trash"></i></a>
+                    </td>
+                  </tr>
+                  {{/each}}
+                </table>
+              </div>
+            </div>
+            <div class="card-footer text-right">
+              <nav class="d-inline-block">
+                <ul class="pagination mb-0">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1 <span
+                        class="sr-only">(current)</span></a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <a href="/admin/tag/add" class="btn btn-primary">Thêm tag</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
