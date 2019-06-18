@@ -7,8 +7,10 @@ var app = express();
 app.use(morgan('dev'));
 app.use(express.static('public'));
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
- 
+app.use(express.json()) 
+app.use(bodyParser.urlencoded())
+
+
 // parse application/json
 app.use(bodyParser.json())
 app.engine('hbs', exphbs({
@@ -39,7 +41,8 @@ app.get('/admin', (req, res) => {
 })
 app.use('/admin/categories', require('./routes/admin/category.route'));
 app.use('/admin/user', require('./routes/admin/users.route'));
+app.use('/admin/tag', require('./routes/admin/tag.route'));
 
-app.listen(3001, () => {
-    console.log('Web Server is running at http://localhost:3001');
+app.listen(3000, () => {
+    console.log('Web Server is running at http://localhost:3000');
 })
