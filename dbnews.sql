@@ -42,14 +42,27 @@ CREATE TABLE `comment` (
 -- Cấu trúc bảng cho bảng `loaitin`
 --
 
-CREATE TABLE `loaitin` (
-  `idLT` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `loaitin` (
+  `idLT` int(11) NOT NULL AUTO_INCREMENT,
   `Ten` varchar(100) NOT NULL DEFAULT '',
+  `BienTapVien` varchar(255) NOT NULL,
   `ThuTu` tinyint(11) NOT NULL DEFAULT '0',
-  `AnHien` tinyint(1) NOT NULL DEFAULT '1',
-  `idTL` int(11) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `NgayTao` varchar(20) NOT NULL DEFAULT '19/06/2019',
+  `idTL` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idLT`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
+--
+-- Dumping data for table `loaitin`
+--
+
+INSERT INTO `loaitin` (`idLT`, `Ten`, `BienTapVien`, `ThuTu`, `idTL`) VALUES
+(1, 'Giáo Dục', 'Hoàng Long', 1, 1),
+(2, 'Nhịp Điệu Trẻ', 'Kông Kiệt', 2, 1),
+(3, 'Du Lịch', 'Bảo Lộc', 3, 1),
+(4, 'Du Học', 'Kiều My', 4, 1),
+(5, 'Cuộc Sống Đó Đây', 'Khánh Linh', 1, 2),
+(6, 'Ảnh', 'Phi Linh', 2, 2);
 -- --------------------------------------------------------
 
 --
@@ -208,10 +221,30 @@ INSERT INTO `tags` (`TenTag`, `NgayTao`) VALUES
 ('BlackPink', '19-06-2019');
 
 ALTER TABLE `tags`
-  ADD PRIMARY KEY (`idTag`)
+  ADD PRIMARY KEY (`idTag`);
 
-DROP TABLE tags
-DELETE FROM tags where idTag=9
+CREATE TABLE `editors` (
+  `idEditor` int(11) NOT NULL auto_increment,
+  `HoTen` varchar(100) NOT NULL DEFAULT '',
+  `Username` varchar(50) NOT NULL DEFAULT '',
+  `Password` varchar(50) NOT NULL,
+  `DiaChi` varchar(255) DEFAULT NULL,
+  `DienThoai` varchar(255) DEFAULT NULL,
+  `Email` varchar(255) NOT NULL DEFAULT '',
+  `NgaySinh` date DEFAULT '2000-10-10',
+  `GioiTinh` varchar(3) DEFAULT NULL,
+  `TrangThai` varchar(20) default 'Hoạt động',
+  PRIMARY KEY (`idEditor`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `editors` (`HoTen`, `Username`, `Password`, `DiaChi`, `DienThoai`, `Email`, `GioiTinh`, `TrangThai`) values
+('Hoàng Long', 'username','password','diachi','dienthoai','email','Nam','Hoạt động'),
+('Kông Kiệt', 'username','password','diachi','dienthoai','email','Nam','Hoạt động'),
+('Khánh Linh', 'username','password','diachi','dienthoai','email','Nữ','Hoạt động'),
+('Kiều My', 'username','password','diachi','dienthoai','email','Nữ','Hoạt động'),
+('Phi Linh', 'username','password','diachi','dienthoai','email','Nữ','Hoạt động'),
+('Bảo Lộc', 'username','password','diachi','dienthoai','email','Nam','Hoạt động');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
