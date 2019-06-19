@@ -14,7 +14,7 @@ module.exports = {
   },
 
   update_allow: () => {
-    var sql = `UPDATE tin SET AnHien = '1' WHERE idTin = '1635'`
+    var sql = `UPDATE tin SET AnHien = '1' WHERE idTin = '2000'`
     return db.load(sql);
   },
 };
