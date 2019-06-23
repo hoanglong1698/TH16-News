@@ -11,6 +11,7 @@ router.get('/pending', (req, res) => {
     post_manageModel.pending()
         .then(rows => {
             res.render('admin/vwPosts/post_manage_pending', {
+                layout : 'main',
                 posts: rows
             });
         }).catch(err => {
@@ -23,6 +24,7 @@ router.get('/deny', (req, res) => {
     post_manageModel.deny()
     .then(rows => {
         res.render('admin/vwPosts/post_manage_deny', {
+            layout : 'main',
             posts: rows
         });
     }).catch(err => {
@@ -35,6 +37,7 @@ router.get('/allow', (req, res) => {
     post_manageModel.allow()
     .then(rows => {
         res.render('admin/vwPosts/post_manage_allow', {
+            layout : 'main',
             posts: rows
         });
     }).catch(err => {

@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
   categoryModel.all()
     .then(rows => {
       res.render('admin/vwCategories/index', {
+        layout : 'main',
         loaitin: rows
       });
     }).catch(err => {
@@ -19,7 +20,8 @@ router.get('/add', (req, res) => {
   categoryModel.editor()
   .then(rows => {
     res.render('admin/vwCategories/add', {
-      editors: rows
+      layout : 'main',
+      editor: rows
     });
   }).catch(err => {
     console.log(err);
@@ -44,6 +46,7 @@ router.get('/edit/:id', (req, res) => {
   .then(rows => {
     if (rows.length > 0) {
       res.render('admin/vwCategories/edit', {
+        layout : 'main',
         category_edit: rows[0],
       });
     }

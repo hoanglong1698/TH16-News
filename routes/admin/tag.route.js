@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
   tagModel.all()
     .then(rows => {
       res.render('admin/vwTags/index', {
+        layout : 'main',
         tags: rows
       });
     }).catch(err => {
@@ -16,13 +17,15 @@ router.get('/', (req, res) => {
 })
 
 router.get('/add', (req, res) => {
-  res.render('admin/vwTags/add');
+  res.render('admin/vwTags/add',{
+    layout : 'main',
+  });
 })
 
 router.post('/add', (req, res) => {
   var tag = {
       TagName: req.body.TagName,
-      NgayTao: "19-06-2019",
+      NgayTao: "23-06-2019",
   };
   tagModel.add(tag);
   res.redirect('/admin/tag');
@@ -34,6 +37,7 @@ router.get('/edit/:id', (req, res) => {
   .then(rows => {
     if (rows.length > 0) {
       res.render('admin/vwTags/edit', {
+        layout : 'main',
         tag_edit: rows[0],
       });
     }

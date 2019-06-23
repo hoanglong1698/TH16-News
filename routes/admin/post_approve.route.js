@@ -3,14 +3,11 @@ var post_approveModel = require('../../models/post_approve.model');
 
 var router = express.Router();
 
-// router.get('/pending', (req, res) => {
-//     res.render('admin/vwPosts/approve_pending');
-// })
-
 router.get('/pending', (req, res) => {
     post_approveModel.pending()
         .then(rows => {
             res.render('admin/vwPosts/approve_pending', {
+                layout : 'main',
                 posts: rows
             });
         }).catch(err => {
@@ -23,6 +20,7 @@ router.get('/deny', (req, res) => {
     post_approveModel.deny()
     .then(rows => {
         res.render('admin/vwPosts/approve_deny', {
+            layout : 'main',
             posts: rows
         });
     }).catch(err => {
@@ -35,6 +33,7 @@ router.get('/allow', (req, res) => {
     post_approveModel.allow()
     .then(rows => {
         res.render('admin/vwPosts/approve_allow', {
+            layout : 'main',
             posts: rows
         });
     }).catch(err => {

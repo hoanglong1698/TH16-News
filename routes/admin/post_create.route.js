@@ -4,7 +4,9 @@ var post_createModel = require('../../models/post_create.model');
 var router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('admin/vwPosts/create');
+  res.render('admin/vwPosts/create', {
+    layout : 'main'
+  });
 })
 
 router.get('/create', (req, res) => {

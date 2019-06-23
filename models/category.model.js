@@ -14,12 +14,12 @@ module.exports = {
   },
 
   editor: () => {
-    return db.load('select * from editors');
+    return db.load('select * from editor');
   },
 
   add: (category) => {
     var sql = `insert into loaitin (Ten, BienTapVien, ThuTu, NgayTao, idTL)
-               values ('${category.CategoryName}', '${category.EditorName}', '20', '19-06-2019', '1')`
+               values ('${category.CategoryName}', '${category.EditorName}', '20', '23-06-2019', '1')`
     return db.load(sql);
   },
 

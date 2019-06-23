@@ -30,13 +30,27 @@
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-1">Tóm tắt</label>
+                                        <div class="col-sm-12 col-md-11">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-1">Chuyên
                                             mục</label>
                                         <div class="col-sm-12 col-md-11">
                                             <select class="form-control selectric">
-                                                <option>Công nghệ</option>
-                                                <option>Chính trị</option>
-                                                <option>Xã hội</option>
+                                                <option>Bóng đá</option>
+                                                <option>Tennis</option>
+                                                <option>Cuộc sống đó đây</option>
+                                                <option>Âm nhạc</option>
+                                                <option>Điện ảnh</option>
+                                                <option>Quốc tế</option>
+                                                <option>Mua sắm</option>
+                                                <option>Hoa hậu</option>
+                                                <option>Nghệ sĩ</option>
+                                                <option>Mỹ thuật</option>
                                             </select>
                                         </div>
                                     </div>
@@ -44,14 +58,7 @@
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-1">Nội
                                             dung</label>
                                         <div class="col-sm-12 col-md-11">
-                                            <div id="summernote"></div>
-                                            <script>
-                                                $('#summernote').summernote({
-                                                    placeholder: 'Hello bootstrap 4',
-                                                    tabsize: 2,
-                                                    height: 200
-                                                });
-                                            </script>
+                                            <textarea class="form-control" placeholder="Nhập nội dung" data-height="500"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
@@ -65,18 +72,10 @@
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-1">Tags</label>
-                                        <div class="col-sm-12 col-md-11">
-                                            <input type="text" class="form-control inputtags">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-1">Trạng
                                             thái</label>
                                         <div class="col-sm-12 col-md-11">
                                             <select class="form-control selectric">
-                                                <option>Nháp</option>
                                                 <option>Chờ duyệt</option>
                                             </select>
                                         </div>
@@ -85,7 +84,8 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-1"></label>
                                     <div class="col-sm-12 col-md-11">
-                                        <button class="btn btn-primary">Lưu bài viết</button>
+                                        <a class="nav-link" href="/admin/post_create/create"><span
+                                            class="btn btn-primary">Lưu bài viết</span></a>
                                     </div>
                                 </div>
                             </div>
