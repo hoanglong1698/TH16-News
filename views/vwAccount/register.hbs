@@ -1,0 +1,133 @@
+{{#section 'css'}}
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+{{/section}}
+
+{{#section 'js'}}
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script>
+  $(function () {
+
+    $('#txtDOB').datetimepicker({
+      format: 'd/m/Y',
+      timepicker: false,
+      mask: true,
+    });
+
+    $('#registerForm').validate({
+      rules: {
+        username: {
+          required: true,
+          remote: {
+            url: '/account/is-available'
+          }
+        },
+
+        password: {
+          required: true,
+          minlength: 6
+        },
+        confirm: {
+          required: true,
+          equalTo: $('[name="password"]')
+        },
+        name: {
+          required: true,
+        },
+        email: {
+          required: true,
+          email: true
+        },
+
+      },
+      messages: {
+        username: {
+          required: 'Your username is required.',
+          remote: 'Your username has been taken, please take another.'
+        },
+        password: {
+          required: 'Your password is required.',
+          minlength: 'Your password must have at least 6 characters.'
+        },
+        confirm: {
+          required: 'Your password does not match.',
+          equalTo: 'Your password does not match.'
+        },
+        name: {
+          required: 'Valid full name is required.',
+        },
+        email: {
+          required: 'Please enter a valid email address.',
+          email: 'Please enter a valid email address.'
+        },
+
+        dob: {
+          required: 'Valid date of birth is required.',
+        },
+
+      },
+      errorElement: 'small',
+      errorClass: 'help-block text-danger',
+      highlight: function (e) {
+        $(e).removeClass('is-valid').addClass('is-invalid');
+      },
+      unhighlight: function (e) {
+        $(e).removeClass('is-invalid').addClass('is-valid');
+      }
+    });
+  })
+</script>
+{{/section}}
+
+<div class="container-fluid mb-4">
+  <div class="container">
+    <div class="col-12 text-center contact_margin_svnit ">
+      <div class="text-center fh5co_heading py-2">Register</div>
+    </div>
+    <div class="row" style="justify-content : center">
+      <div class="col-12 col-md-6">
+        <form class="row" novalidate action="" method="POST" id="registerForm">
+          <div class="col-12 py-3">
+            <label for="txtUsername">Username</label>
+            <input type="text" class="form-control fh5co_contact_text_box" id="txtUsername" name="username"
+              placeholder="Username" />
+          </div>
+          <div class="col-12 py-3">
+            <label for="txtPassword">Password</label>
+            <input type="password" class="form-control fh5co_contact_text_box" id="txtPassword" name="password"
+              placeholder="Password" />
+          </div>
+          <div class="col-12 py-3">
+            <label for="txtConfirm">Confirm</label>
+            <input type="password" class="form-control fh5co_contact_text_box" id="txtConfirm" name="confirm"
+              placeholder="confirm your password" />
+          </div>
+          <div class="col-12 py-3">
+            <label for="txtName">Name</label>
+            <input type="text" class="form-control fh5co_contact_text_box" id="txtName" name="name"
+              placeholder="Name" />
+          </div>
+          <div class="col-12 py-3">
+            <label for="txtEmail">Email</label>
+            <input type="text" class="form-control fh5co_contact_text_box" id="txtEmail" name="email"
+              placeholder="Email" />
+          </div>
+          <div class="col-12 py-3">
+            <label for="txtDOB">Date of birth</label>
+            <input type="text" class="form-control fh5co_contact_text_box" id="txtDOB" name="dob"
+              placeholder="Date of birth" />
+          </div>
+          <div class="col-12 py-3 text-center">
+            <button type="submit" class="btn btn-lg btn-success btn-block">
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

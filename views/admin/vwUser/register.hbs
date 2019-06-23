@@ -1,0 +1,97 @@
+
+      <form class="adduserform" method="POST" onsubmit="return sendData()">
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="colFormLabelLg" style="font-size:16px">Họ Tên</label>
+            <input type="text" class="form-control" id="Name" placeholder="HoTen" name="Name">
+          </div>
+        </div>
+
+        
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="colFormLabelLg" style="font-size:16px">Username</label>
+            <input type="text" class="form-control" id="Username" placeholder="Username" name="Username">
+          </div>
+        </div>
+          
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="colFormLabelLg" style="font-size:16px">Password</label>
+            <input type="password" class="form-control" id="Password" placeholder="Password" name="Password">
+          </div>
+        </div>
+          
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="colFormLabelLg" style="font-size:16px">Email</label>
+            <input type="text" class="form-control" id="Email" placeholder="Email" name="Email">
+          </div>
+        </div>
+        
+
+          
+          <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="colFormLabelLg" style="font-size:16px">Ngày sinh</label>
+            <input type="date" class="form-control datemask" id="DOB" placeholder="NgaySinh" name="DOB">
+          </div>
+        </div>
+
+          
+          
+          <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="colFormLabelLg" style="font-size:16px">Permission</label>
+            <input type="text" class="form-control" id="Permission" placeholder="Permission" name="Permission">
+          </div>
+        </div>
+         <div class="form-row">
+          <div class="form-group col-md-4">
+          <label for="colFormLabelLg" style="font-size:16px">Ảnh đại diện</label>
+          <div class="col-sm-12 col-md-7">
+            <div id="image-preview" class="image-preview">
+              <label for="image-upload" id="image-label">Chọn tệp</label>
+              <input type="file" name="image" id="image-upload" />
+            </div>
+          </div>
+          </div>
+        </div>
+        
+
+         
+
+            <a href="/admin/user-manage" class="btn btn-success">Trởi về</a>
+            <button class="btn btn-primary"  type="submit" onclick="sendData()">LƯU</button>
+             
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+{{!-- <form class="adduserform" method="POST" onsubmit="return sendData()">
+  
+  <input type="text" name="HoTen" placeholder="HoTen" />
+  <input type="text" name="Username" placeholder="Username" />
+  <input type="password" name="Password" placeholder="Password" />
+  <input type="text" name="DiaChi" placeholder="DiaChi" />
+  <input type="text" name="Dienthoai " placeholder="Dienthoai" />
+  <input type="text" name="Email" placeholder="Email" />
+  <input type="date" name="NgayDangKy" placeholder="NgayDangKy" />
+  <input type="date" name="NgaySinh" placeholder="NgaySinh" />
+  <input type="text" name="GioiTinh" placeholder="GioiTinh" />
+  <input type="text" name="VipPresent" placeholder="VipPresent" />
+  <button type="submit" onclick="sendData()">Add</button>
+</form> --}}
+<script>
+  var function sendData() {
+    var form = document.querySelector('form');
+    var data = new FormData(form);
+    var req = new XMLHttpRequest();
+    req.send(data);
+    console.log(data)
+  }
+</script>
